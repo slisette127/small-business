@@ -13,21 +13,21 @@ export default SmallBiz = [
     },
     {
         name: 'Birdcreek Burger Co.',
-        description: 'Burgers & American comfort food',
+        description: 'Burgers & American Comfort Food',
         address: '6 S Main St, Temple, TX 76501',
         operatingHours: '10:00 - 8:00'
     },
     {
         name: 'Mexiko Cafe',
-        description: 'Mexican and Korean fusion',
+        description: 'Mexican and Korean Fusion',
         address: '116 S 1st St Suite A, Temple, TX 76501',
         operatingHours: '11:00 - 9:00'
     },
     {
-        name: '',
-        description: '',
-        address: '',
-        operatingHours: ''
+        name: 'Old Jodys Restaurant',
+        description: 'Homespun Southern Eatery',
+        address: '1219 S 1st St A, Temple, TX 76504',
+        operatingHours: '10:00 - 9:00'
     },
     {
         name: '',

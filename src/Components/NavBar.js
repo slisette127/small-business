@@ -1,33 +1,48 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+import { IconButton, Button, Typography, Toolbar, Box, AppBar, ThemeProvider, makeStyles } from '@material-ui/core';
+
+const customStyles = makeStyles((theme) =>({
+    // palette: {
+    //   secondary: {
+    //     main: "#F5BD1F"
+    //   },
+      root: {
+        flexGrow: 1,
+      },
+      menuButton: {
+        marginRight: theme.spacing(2),
+      },
+      title: {
+        flexGrow: 1,
+      }
+    }
+  ));
 
 
 export default function ButtonAppBar() {
+    const classes = customStyles();
+
     return (
-      <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
+        <ThemeProvider theme={customStyles}>
+      <Box className={classes.root}>
+        <AppBar position="static" color="secondary">
           <Toolbar>
             <IconButton
               size="large"
               edge="start"
-              color="inherit"
               aria-label="menu"
-              sx={{ mr: 2 }}
+              className={classes.menuButton}
             >
-              <MenuIcon />
+             
             </IconButton>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              News
+            <Typography variant="h6" component="div" className={classes.title}>
+              Temple Small Business
             </Typography>
+            <Button color="inherit">Listings</Button>
             <Button color="inherit">Login</Button>
           </Toolbar>
         </AppBar>
       </Box>
+        </ThemeProvider>
     );
   }
