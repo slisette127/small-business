@@ -1,4 +1,4 @@
-export default SmallBiz = [
+export const smallBiz = [
     {
         name: 'La Dalat',
         description: 'Vietnamese Cuisine',
