@@ -28,11 +28,5 @@ export const smallBiz = [
         description: 'Homespun Southern Eatery',
         address: '1219 S 1st St A, Temple, TX 76504',
         operatingHours: '10:00 - 9:00'
-    },
-    {
-        name: '',
-        description: '',
-        address: '',
-        operatingHours: ''
     }
 ]

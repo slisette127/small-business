@@ -14,11 +14,13 @@ export default function LogIn(props) {
     }
 
     const handleLogIn = (event) => {
+        document.cookie = "loggedIn=true; max-age=60*1000"
         event.preventDefault()
         user.userName = userName
         user.loggedIn = loggedIn
         props.navLog(loggedIn)
         console.log("user: ", user)
+        window.location.replace("/Listings")
     }
 
     return (

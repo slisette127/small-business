@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { IconButton, Button, Typography, Toolbar, Box, AppBar } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
+import { Link } from 'react-router-dom'
+
 
 
 
@@ -22,8 +24,12 @@ export default function ButtonAppBar(props) {
             <Typography variant="h6" component="div">
               Temple Small Business
             </Typography>
-            <Button color="inherit">Listings</Button>
-            <Button color="inherit">Login</Button>
+            <Link style={{textDecoration:'none'}} to="/Listings"> 
+                <Button color="inherit">Listings</Button>
+            </Link>
+            <Link style={{textDecoration:'none'}} to="/Listings">
+                <Button color="inherit">Login</Button>
+            </Link>
           </Toolbar>
         </AppBar>
         {props.loggedIn && <div style={{backgroundColor:"blue"}}>
