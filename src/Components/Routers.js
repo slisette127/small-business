@@ -4,6 +4,7 @@ import NavBar from "./NavBar"
 import LogIn from "./LogIn"
 import Listings from "./Listings"
 import { useState } from 'react';
+import Directions from './Directions'
 
 const cookie = require('cookie');
 
@@ -35,6 +36,10 @@ export default function Routers() {
                 <Route path="/Listings">
                     <NavBar/>
                     <Listings/>
+                </Route>
+                <Route path="/Map">
+                    <NavBar/>
+                    <Directions/>
                 </Route>
             </Switch>
         </BrowserRouter>

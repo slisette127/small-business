@@ -2,10 +2,11 @@ import { Button } from '@material-ui/core';
 import React, { useState } from 'react'
 import DeleteIcon from '@material-ui/icons/Delete';
 import cookie from 'cookie';
+import Directions from './Directions';
 
 
 export default function Details(props) {
-    const {name, description, address, operatingHours} = props.biz
+    const {name, description, address, operatingHours, latitude, longitude} = props.biz
     const [hidden,isHidden] = useState(true)
     const cookies = cookie.parse(document.cookie)
 
@@ -31,14 +32,20 @@ export default function Details(props) {
                     <DeleteIcon/>
                 </div>
             )}
+
                 {!hidden && (
+                    <div>
                     <div>
                         <h2 style={{textAlign:"center",
                                     }}>{address}</h2>
-                        <h2 style={{textAlign:"center"}}>{operatingHours}</h2>
+                        <h2 style={{textAlign:"center",
+                                    margin: "20px"}}>{operatingHours}</h2>
+                    </div>
+                <div>
+                 <Directions latitude={latitude} longitude={longitude} />
+                </div>
                     </div>
                 )}
-            
         </div>
 
     )
