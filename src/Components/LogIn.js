@@ -31,16 +31,22 @@ export default function LogIn(props) {
                 height:"400px", 
                 margin:"40px auto auto auto",
                 display: "flex",
-                flexDirection:"column"
+                flexDirection:"column",
+                alignItems: "center",
+                justifyContent: "center"
+                
                 }} >
 
                 <h1>Log In </h1>
-               <div style={{margin:"40px"}}>
+               <div style={{margin:"30px",
+                            padding: "10px"
+                            }}>
                    <form onSubmit={handleLogIn} >
                     <TextField required fullWidth name="userName" onChange={handleInput} label="Username" variant="standard" />
 
                     <TextField required fullWidth label="Password" variant="standard" />
-                   <Button variant="contained" color="primary" type="submit" onClick={() => {setLoggedIn(true)}}>Log In</Button>
+                   <Button style={{margin:"50px"}}
+                        variant="contained" color="primary" type="submit" onClick={() => {setLoggedIn(true)}}>Log In</Button>
                    </form>
                 </div> 
             </Paper>
